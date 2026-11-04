@@ -16,7 +16,7 @@ class KueController extends Controller
     {
         $request->validate([
             'nama_kue' => 'required|string|max:100',
-            'kategori' => 'required|string|max:50',
+            'kategori' => 'required|in:Cake,Brownies,Kue Kering,Donat',
             'harga' => 'required|integer',
             'stok' => 'required|integer',
         ]);

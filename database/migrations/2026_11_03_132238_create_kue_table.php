@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kue', function (Blueprint $table) {
             $table->id();
             $table->string('nama_kue', 100);
-            $table->string('kategori', 50);
+            $table->enum('kategori', ['Cake', 'Brownies', 'Kue Kering', 'Donat']);
             $table->integer('harga');
             $table->integer('stok');
             $table->timestamps();

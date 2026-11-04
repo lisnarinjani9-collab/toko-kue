@@ -45,7 +45,13 @@
                     </div>
                     <div class="form-group">
                         <label>Kategori</label>
-                        <input type="text" id="kategori" name="kategori" value="{{ old('kategori') }}" placeholder="Contoh: Brownies" required>
+                        <select name="kategori">
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Cake" @selected(old('kategori') == 'Cake')>Cake</option>
+                            <option value="Brownies" @selected(old('kategori') == 'Brownies')>Brownies</option>
+                            <option value="Kue Kering" @selected(old('kategori') == 'Kue Kering')>Kue Kering</option>
+                            <option value="Donat" @selected(old('kategori') == 'Donat')>Donat</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Harga (Rp)</label>
@@ -54,7 +60,7 @@
                     </div>
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="number" id="stok" name="stok" value="{{ old('stok') }}" placeholder="Contoh: 10" min="0">
+                        <input type="number" id="stok" name="stok" value="{{ old('stok') }}" placeholder="Contoh: 10" min="1">
                     </div>
                     <div class="form-action">
                         <button type="submit" class="btn">Simpan</button>
