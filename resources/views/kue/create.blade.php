@@ -12,9 +12,10 @@
         <aside class="sidebar">
             <div class="logo">Toko Kue</div>
             <nav>
-                <a href="/kue/create" class="active">Data Kue</a>
-                <a href="/pembeli/create">Data Pembeli</a>
-                <a href="/pesanan/create">Data Pesanan</a>
+<a href="/">Beranda</a>
+<a href="/kue">Data Kue</a>
+<a href="/pembeli/create">Data Pembeli</a>
+<a href="/pesanan/create">Data Pesanan</a>
             </nav>
         </aside>
 
@@ -63,8 +64,9 @@
                         <input type="number" id="stok" name="stok" value="{{ old('stok') }}" placeholder="Contoh: 10" min="1">
                     </div>
                     <div class="form-action">
-                        <button type="submit" class="btn">Simpan</button>
-                    </div>
+                    <a href="/kue" class="btn btn-secondary">Batal</a>
+                    <button type="submit" class="btn">Simpan</button>
+                </div>
                 </form>
             </div>
         </main>

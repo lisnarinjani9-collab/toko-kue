@@ -151,3 +151,90 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+.page-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn-tambah {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #1f3a5f;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.btn-tambah:hover {
+    background-color: #162b47;
+}
+
+.card-lebar {
+    max-width: none;
+}
+
+.search-form {
+    margin-bottom: 15px;
+}
+
+.search-form input {
+    max-width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f2f4f7;
+}
+
+.kosong {
+    text-align: center;
+    color: #777777;
+}
+
+.ringkasan {
+    display: flex;
+    gap: 20px;
+}
+
+.kotak {
+    min-width: 200px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+.kotak span {
+    display: block;
+    margin-bottom: 8px;
+    color: #777777;
+    font-size: 14px;
+}
+
+.kotak strong {
+    font-size: 28px;
+}
+.btn-secondary {
+    display: inline-block;
+    margin-right: 8px;
+    background-color: #e5e7eb;
+    color: #333333;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}

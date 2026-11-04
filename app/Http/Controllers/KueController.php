@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class KueController extends Controller
 {
+public function index(Request $request)
+{
+    $kue = Kue::where('nama_kue', 'like', '%' . $request->cari . '%')->get();
+
+    return view('kue.index', compact('kue'));
+}
     public function create()
     {
         return view('kue.create');
@@ -22,6 +28,6 @@ class KueController extends Controller
         ]);
 
         Kue::create($request->all());
+return redirect('/kue')->with('success', 'Kue berhasil ditambahkan.');        }
 
-    return redirect('/kue/create')->with('success', 'Kue berhasil ditambahkan.');    }
 }
