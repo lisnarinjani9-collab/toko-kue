@@ -7,21 +7,38 @@ use Illuminate\Http\Request;
 
 class PembeliController extends Controller
 {
-    public function create()
+    //index -> menampilkan halaman utama
+    public function index()
     {
-        return view('pembeli.create');
+        $pembeli = Pembeli::get();
+        return view('pembeli.pages.pembeli', compact('pembeli'));
     }
 
+    //create -> menampilkan halaman tambah
+    public function create()
+    {
+        return view('pembeli.pages.tambah');
+    }
+
+    //store -> menjalankan fungsi tambah data
     public function store(Request $request)
     {
         $request->validate([
             'nama_pembeli' => 'required|string|max:100',
             'no_hp' => 'required|string|max:15',
-            'alamat' => 'required|string|max:200',
+            'alamat' => 'required|string|max:200'
+        ]);
+        Pembeli::create([
+            'nama_pembeli' => $request->nama_pembeli,
+            'no_hp' => $request->no_hp,
+            'alamat' => $request->alamat
         ]);
 
-        Pembeli::create($request->all());
-
-        return redirect('/pembeli/create')->with('success', 'Pembeli berhasil ditambahkan.');
+        return redirect()->route('pembeli.table')->with('success', 'Data pembeli berhasil ditambahkan.');
     }
+
+    //edit -> menampilkan halaman update
+    //update -> menjalankan fungsi edit data
+
+    //destroy -> menghapus data
 }

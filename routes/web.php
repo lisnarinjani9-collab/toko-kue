@@ -1,21 +1,16 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KueController;
 use App\Http\Controllers\PembeliController;
-use App\Models\Kue;
-use App\Models\Pembeli;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index', [
-        'jumlahKue' => Kue::count(),
-        'jumlahPembeli' => Pembeli::count(),
-    ]);
-});
+Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
-Route::get('/kue', [KueController::class, 'index']);
-Route::get('/kue/create', [KueController::class, 'create']);
-Route::post('/kue', [KueController::class, 'store']);
+Route::get('/kue', [KueController::class, 'index'])->name('kue.table');
+Route::get('/kue/tambah', [KueController::class, 'create'])->name('kue.tambah');
+Route::post('/kue/tambah', [KueController::class, 'store'])->name('kue.store');
 
-Route::get('/pembeli/create', [PembeliController::class, 'create']);
-Route::post('/pembeli', [PembeliController::class, 'store']);
+Route::get('/pembeli', [PembeliController::class, 'index'])->name('pembeli.table');
+Route::get('/pembeli/tambah', [PembeliController::class, 'create'])->name('pembeli.tambah');
+Route::post('/pembeli/tambah', [PembeliController::class, 'store'])->name('pembeli.store');

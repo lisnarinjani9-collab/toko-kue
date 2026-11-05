@@ -2,10 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Pembeli extends Model
 {
-protected $table = 'pembeli';
-protected $fillable = ['nama_pembeli', 'no_hp', 'alamat'];
+    use HasFactory;
+
+    protected $table = 'pembeli';
+
+    protected $fillable = [
+        'nama_pembeli',
+        'no_hp',
+        'alamat',
+    ];
 }
