@@ -14,8 +14,12 @@
                 <strong>{{ $jumlahKue }}</strong>
             </div>
             <div class="kotak">
-                <span>Jumlah Pembeli</span>
-                <strong>{{ $jumlahPembeli }}</strong>
+                <span>Jumlah Bahan Baku</span>
+                <strong>{{ $jumlahBahan }}</strong>
+            </div>
+            <div class="kotak">
+                <span>Jumlah Pegawai</span>
+                <strong>{{ $jumlahPegawai }}</strong>
             </div>
         </section>
     </main>

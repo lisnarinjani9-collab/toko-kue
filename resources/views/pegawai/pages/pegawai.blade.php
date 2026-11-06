@@ -1,13 +1,13 @@
-@extends('pembeli.index')
+@extends('pegawai.index')
 @section('content')
     <main class="main">
         <header class="page-header">
             <div>
-                <h1>Pembeli</h1>
-                <p class="subtitle">Kelola data pembeli Anda.</p>
+                <h1>Pegawai</h1>
+                <p class="subtitle">Kelola data pegawai Anda.</p>
             </div>
-            <a href="{{ route('pembeli.tambah') }}" class="btn btn-primary">
-                + Tambah Pembeli
+            <a href="{{ route('pegawai.tambah') }}" class="btn btn-primary">
+                + Tambah Pegawai
             </a>
         </header>
 
@@ -17,7 +17,7 @@
             @endif
 
             <div class="toolbar">
-                <input type="search" id="searchPembeli" class="search" placeholder="Cari nama pembeli...">
+                <input type="search" id="searchPegawai" class="search" placeholder="Cari nama pegawai...">
             </div>
 
             <div class="table-wrap">
@@ -25,19 +25,21 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Nama Pembeli</th>
+                            <th>Nama Pegawai</th>
+                            <th>Jabatan</th>
                             <th>No. HP</th>
-                            <th>Alamat</th>
+                            <th>Tanggal Masuk</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody id="daftarPembeli">
-                        @foreach ($pembeli as $item)
-                            <tr data-nama="{{ $item->nama_pembeli }}">
+                    <tbody id="daftarPegawai">
+                        @foreach ($pegawai as $item)
+                            <tr data-nama="{{ $item->nama_pegawai }}">
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->nama_pembeli }}</td>
-                                <td>{{ $item->no_hp }}</td>
-                                <td>{{ $item->alamat }}</td>
+                                <td>{{ $item->nama_pegawai }}</td>
+                                <td>{{ $item->jabatan_pegawai }}</td>
+                                <td>{{ $item->no_hp_pegawai }}</td>
+                                <td>{{ $item->tanggal_masuk }}</td>
                                 <td>
                                     <button type="button" class="btn btn-secondary">Edit</button>
                                     <button type="button" class="btn btn-danger">Hapus</button>

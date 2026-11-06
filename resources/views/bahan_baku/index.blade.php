@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 {{-- bagian head --}}
-@include('pembeli.partials.head')
+@include('bahan_baku.partials.head')
 
 <body>
     <div class="app">
         {{-- bagian sidebar --}}
-        @include('pembeli.components.sidebar')
+        @include('bahan_baku.components.sidebar')
 
         {{-- main content  --}}
         @yield('content')

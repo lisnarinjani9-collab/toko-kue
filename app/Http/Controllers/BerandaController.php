@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BahanBaku;
 use App\Models\Kue;
-use App\Models\Pembeli;
+use App\Models\Pegawai;
 
 class BerandaController extends Controller
 {
@@ -11,7 +12,8 @@ class BerandaController extends Controller
     public function index()
     {
         $jumlahKue = Kue::count();
-        $jumlahPembeli = Pembeli::count();
-        return view('beranda.pages.beranda', compact('jumlahKue', 'jumlahPembeli'));
+        $jumlahBahan = BahanBaku::count();
+        $jumlahPegawai = Pegawai::count();
+        return view('beranda.pages.beranda', compact('jumlahKue', 'jumlahBahan', 'jumlahPegawai'));
     }
 }
