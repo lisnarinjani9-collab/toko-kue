@@ -25,13 +25,13 @@ class BahanBakuController extends Controller
     {
         $request->validate([
             'nama_bahan' => 'required|string|max:100',
-            'satuan_bahan' => 'required|in:kg,gram,liter,butir,pcs',
+            'kategori_bahan' => 'required|in:Bahan Kering,Bahan Basah,Topping',
             'stok_bahan' => 'required|integer',
             'harga_bahan' => 'required|integer'
         ]);
         BahanBaku::create([
             'nama_bahan' => $request->nama_bahan,
-            'satuan_bahan' => $request->satuan_bahan,
+            'kategori_bahan' => $request->kategori_bahan,
             'stok_bahan' => $request->stok_bahan,
             'harga_bahan' => $request->harga_bahan
         ]);

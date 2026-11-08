@@ -28,15 +28,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="satuan_bahan">
-                        Satuan <span class="required">*</span>
+                    <label for="kategori_bahan">
+                        Kategori Bahan <span class="required">*</span>
                     </label>
-                    <select id="satuan_bahan" name="satuan_bahan" required>
-                        <option value="kg" @selected(old('satuan_bahan') == 'kg')>kg</option>
-                        <option value="gram" @selected(old('satuan_bahan') == 'gram')>gram</option>
-                        <option value="liter" @selected(old('satuan_bahan') == 'liter')>liter</option>
-                        <option value="butir" @selected(old('satuan_bahan') == 'butir')>butir</option>
-                        <option value="pcs" @selected(old('satuan_bahan') == 'pcs')>pcs</option>
+                    <select id="kategori_bahan" name="kategori_bahan" required>
+                        <option value="Bahan Kering" @selected(old('kategori_bahan') == 'Bahan Kering')>Bahan Kering</option>
+                        <option value="Bahan Basah" @selected(old('kategori_bahan') == 'Bahan Basah')>Bahan Basah</option>
+                        <option value="Topping" @selected(old('kategori_bahan') == 'Topping')>Topping</option>
                     </select>
                 </div>
 
@@ -50,7 +48,7 @@
 
                 <div class="form-group">
                     <label for="harga_bahan">
-                        Harga per Satuan (Rp) <span class="required">*</span>
+                        Harga (Rp) <span class="required">*</span>
                     </label>
                     <input type="number" id="harga_bahan" name="harga_bahan" value="{{ old('harga_bahan') }}"
                         placeholder="Contoh: 12000" min="1" step="1" required>

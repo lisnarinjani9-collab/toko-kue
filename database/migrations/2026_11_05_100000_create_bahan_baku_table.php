@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('bahan_baku', function (Blueprint $table) {
             $table->id();
             $table->string('nama_bahan', 100);
-            $table->enum('satuan_bahan', ['kg', 'gram', 'liter', 'butir', 'pcs'])->default('kg');
+            $table->enum('kategori_bahan', ['Bahan Kering', 'Bahan Basah', 'Topping'])->default('Bahan Kering');
             $table->integer('stok_bahan')->unsigned();
             $table->bigInteger('harga_bahan')->unsigned();
             $table->timestamps();

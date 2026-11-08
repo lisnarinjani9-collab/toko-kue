@@ -26,9 +26,9 @@
                         <tr>
                             <th>No.</th>
                             <th>Nama Bahan</th>
-                            <th>Satuan</th>
+                            <th>Kategori</th>
                             <th>Stok</th>
-                            <th>Harga per Satuan</th>
+                            <th>Harga</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -37,7 +37,7 @@
                             <tr data-nama="{{ $item->nama_bahan }}">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->nama_bahan }}</td>
-                                <td>{{ $item->satuan_bahan }}</td>
+                                <td>{{ $item->kategori_bahan }}</td>
                                 <td>{{ $item->stok_bahan }}</td>
                                 <td>Rp {{ number_format($item->harga_bahan, 0, ',', '.') }}</td>
                                 <td>
