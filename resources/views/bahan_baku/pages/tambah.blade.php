@@ -43,7 +43,7 @@
                         Stok Bahan <span class="required">*</span>
                     </label>
                     <input type="number" id="stok_bahan" name="stok_bahan" value="{{ old('stok_bahan') }}"
-                        placeholder="Contoh: 20" min="0" required>
+                        placeholder="Contoh: 20" min="1" required>
                 </div>
 
                 <div class="form-group">
@@ -51,7 +51,7 @@
                         Harga (Rp) <span class="required">*</span>
                     </label>
                     <input type="number" id="harga_bahan" name="harga_bahan" value="{{ old('harga_bahan') }}"
-                        placeholder="Contoh: 12000" min="1" step="1" required>
+                        placeholder="Contoh: 12000" min="1000" step="1" required>
                 </div>
 
                 <div class="form-actions">
